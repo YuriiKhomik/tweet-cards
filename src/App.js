@@ -14,6 +14,7 @@ export const App = () => {
         justifyContent="center"
       >
         <h1>hi there</h1>
+        <p>azazazazkjkjkj</p>
       </Box>
     </>
   );
