@@ -1,6 +1,11 @@
-import "./App.css";
+import { GlobalStyle } from './constants/globals';
 
 export const App = () => {
-  console.log("azazaz");
-  return <h1>hi there</h1>;
+  console.log('azazaz');
+  return (
+    <>
+      <GlobalStyle />
+      <h1>hi there</h1>
+    </>
+  );
 };
