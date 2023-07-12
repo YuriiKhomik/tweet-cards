@@ -1,5 +1,5 @@
 {
-  "name": "hsqg-react",
+  "name": "tweet-cards",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,7 +13,7 @@
     "styled-system": "^5.1.5",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://YuriiKhomik.github.io/hsqg-react",
+  "homepage": "https://YuriiKhomik.github.io/tweet-cards",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
