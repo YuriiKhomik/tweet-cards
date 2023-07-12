@@ -1,12 +1,12 @@
 import { FollowButton, FollowingButton } from './Button.styled';
 
-export const Button = ({ follow = false }) => {
+export const Button = ({ onClick, follow }) => {
   return (
     <>
       {follow ? (
-        <FollowingButton>following</FollowingButton>
+        <FollowingButton onClick={onClick}>following</FollowingButton>
       ) : (
-        <FollowButton>follow</FollowButton>
+        <FollowButton onClick={onClick}>follow</FollowButton>
       )}
     </>
   );

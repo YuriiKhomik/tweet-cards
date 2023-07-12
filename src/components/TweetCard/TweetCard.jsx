@@ -9,8 +9,13 @@ import {
 } from './TweetCard.styled';
 import { Button } from 'components/Button';
 import avatar from '../images/avatarrr.png';
+import { useState } from 'react';
 
 export const TweetCard = () => {
+  const [follow, setFollow] = useState(false);
+  const handleClick = () => {
+    setFollow(!follow);
+  };
   return (
     <StyledTweetCard>
       <Logo />
@@ -22,7 +27,7 @@ export const TweetCard = () => {
       </AvatarContainer>
       <TweetsCounter>777 tweets</TweetsCounter>
       <FollowersCounter>100,500 followers</FollowersCounter>
-      <Button follow={true} />
+      <Button onClick={handleClick} follow={follow} />
     </StyledTweetCard>
   );
 };
