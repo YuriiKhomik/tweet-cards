@@ -7,7 +7,6 @@ export const App = () => {
   return (
     <>
       <Box
-        p="0px 15px"
         height="100vh"
         display="flex"
         alignItems="center"
