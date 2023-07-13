@@ -30,19 +30,12 @@ export const StyledText = styled.p`
 `;
 
 export const StyledLink = styled(Link)`
-    margin: auto;
-    display: table;
-    margin-top: 25vh;
-    margin-top: 80px;
-
     background-color: transparent;
-    border: solid 4px #000000;
-    color: #000000;
+    border: 4px solid #471ca9;
     cursor: pointer;
-    display: inline-block;
     font-size: 16px;
     padding: 12px 28px;
-    text-decoration: none;
+
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='17' fill='%23000000'%3E %3Cpath fill-rule='evenodd' d='M24.736 10.246v6.351l16.4-8.347-16.4-8.099v6.085H.541v4.01h24.195z'/%3E %3C/svg%3E");
     background-position: right 32px center;
