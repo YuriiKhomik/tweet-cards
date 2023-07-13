@@ -65,14 +65,14 @@ export const AvatarInnerContainer = styled.div`
 
 export const TweetsCounter = styled.p`
   font-size: 20px;
-  // color: #e8d8ff;
+  color: #e8d8ff;
   text-transform: uppercase;
   margin-bottom: 16px;
 `;
 
 export const FollowersCounter = styled.p`
   font-size: 20px;
-  // color: #e8d8ff;
+  color: #e8d8ff;
   text-transform: uppercase;
   margin-bottom: 26px;
 `;
