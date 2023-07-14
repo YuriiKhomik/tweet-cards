@@ -132,13 +132,9 @@ export const TweetCard = ({
       avatar,
     };
 
-    try {
-      await updateFollowers(id, userData);
-      setFollowers(updatedFollowers);
-      setFollow(updatedFollow);
-    } catch (error) {
-      console.error('Error updating followers:', error);
-    }
+    await updateFollowers(id, userData);
+    setFollowers(updatedFollowers);
+    setFollow(updatedFollow);
   };
 
   return (
