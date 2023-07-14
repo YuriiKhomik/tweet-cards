@@ -2,84 +2,84 @@
   {
     "user": "Aristotle",
     "tweets": 44,
-    "followers": 69,
+    "followers": 100500,
     "avatar": "https://i.ibb.co/1XcwTPF/Aristotle.jpg",
     "id": "1"
   },
   {
     "user": "Chrysippus",
     "tweets": 16,
-    "followers": 77,
+    "followers": 100500,
     "avatar": "https://i.ibb.co/BGpWcTg/Chrysippus.jpg",
     "id": "2"
   },
   {
     "user": "Democritus",
     "tweets": 10,
-    "followers": 93,
+    "followers": 100500,
     "avatar": "https://i.ibb.co/gZpRXFy/Democritus.jpg",
     "id": "3"
   },
   {
     "user": "Diogenes",
     "tweets": 32,
-    "followers": 18,
+    "followers": 100500,
     "avatar": "https://i.ibb.co/ws6Hkk7/Diogenes.jpg",
     "id": "4"
   },
   {
     "user": "Epicurus",
     "tweets": 82,
-    "followers": 13,
+    "followers": 100500,
     "avatar": "https://i.ibb.co/sJ0c51v/Epicurus.jpg",
     "id": "5"
   },
   {
     "user": "Heraclitus",
     "tweets": 52,
-    "followers": 54,
+    "followers": 100500,
     "avatar": "https://i.ibb.co/wyZkwTv/Heraclitus.jpg",
     "id": "6"
   },
   {
     "user": "Homer",
     "tweets": 21,
-    "followers": 62,
+    "followers": 100500,
     "avatar": "https://i.ibb.co/RbJBc2T/Homer.jpg",
     "id": "7"
   },
   {
     "user": "Parmenides",
     "tweets": 10,
-    "followers": 44,
+    "followers": 100500,
     "avatar": "https://i.ibb.co/WHdZbjs/Parmenides.jpg",
     "id": "8"
   },
   {
     "user": "Posidonius",
     "tweets": 6,
-    "followers": 6,
+    "followers": 100500,
     "avatar": "https://i.ibb.co/ZJ11p7j/Posidonius.jpg",
     "id": "9"
   },
   {
     "user": "Protagoras",
     "tweets": 57,
-    "followers": 20,
+    "followers": 100500,
     "avatar": "https://i.ibb.co/fvq6CmS/Protagoras.jpg",
     "id": "10"
   },
   {
     "user": "Xenophanes",
     "tweets": 27,
-    "followers": 39,
+    "followers": 100500,
     "avatar": "https://i.ibb.co/z5CjwVb/Xenophanes.jpg",
     "id": "11"
   },
   {
     "user": "Zeno-of-Elea",
     "tweets": 70,
-    "followers": 69,
+    "followers": 100500,
     "avatar": "https://i.ibb.co/sbtBHBM/Zeno-of-Elea.jpg",
     "id": "12"
   }

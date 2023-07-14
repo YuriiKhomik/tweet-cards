@@ -19,7 +19,6 @@ export const Tweets = () => {
     fetchUsers();
   }, []);
 
-  console.log(users);
   return (
     <>
       <TweetsMenu>
@@ -27,14 +26,25 @@ export const Tweets = () => {
         <GoBackButton to="/">go back</GoBackButton>
       </TweetsMenu>
       <TweetsContainer>
-        <TweetCard />
-        <TweetCard />
-        <TweetCard />
-        <TweetCard />
-        <TweetCard />
-        <TweetCard />
-        <TweetCard />
-        <TweetCard />
+        {users.map(item => {
+          const {
+            tweets,
+            followers: initialFollowers,
+            avatar,
+            id,
+            user,
+          } = item;
+          return (
+            <TweetCard
+              tweets={tweets}
+              user={user}
+              initialFollowers={initialFollowers}
+              avatar={avatar}
+              key={id}
+              id={id}
+            />
+          );
+        })}
       </TweetsContainer>
     </>
   );
