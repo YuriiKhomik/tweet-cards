@@ -3,8 +3,8 @@ import backgroundImage from '../images/background-images.png';
 import { ReactComponent as LogoIcon } from '../images/LogoVector.svg';
 import avatarLine from '../images/avatar-line.png';
 
-export const StyledTweetCard = styled.div`
-  position: relative;
+export const StyledTweetCard = styled.li`
+  outline: 1px solid red;
 
   width: 380px;
   height: 460px;
@@ -18,6 +18,7 @@ export const StyledTweetCard = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 28px 0px 28px;
+  margin: 0 auto;
 `;
 
 export const BgImagesContainer = styled.div`

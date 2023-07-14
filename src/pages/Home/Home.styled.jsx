@@ -12,7 +12,7 @@ export const StyledHome = styled.div`
   );
 
   width: 100%;
-  height: 100%;
+  height: 100vh;
 `;
 
 export const StyledTitle = styled.h1`

@@ -6,12 +6,7 @@ import { Tweets } from 'pages/Tweets';
 export const App = () => {
   return (
     <>
-      <Box
-        height="100vh"
-        display="flex"
-        alignItems="center"
-        justifyContent="center"
-      >
+      <Box display="flex" alignItems="center" justifyContent="center">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/tweets" element={<Tweets />} />

@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-export const StyledTweets = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+export const TweetsContainer = styled.ul`
+  outline: 1px solid red;
 
-  width: 100%;
-  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  row-gap: 20px;
 `;

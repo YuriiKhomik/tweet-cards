@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { StyledTweets } from './Tweets.styled';
+import { TweetsContainer } from './Tweets.styled';
 import { TweetCard } from 'components/TweetCard';
 import { Link } from 'react-router-dom';
 import { getUsers } from 'services';
@@ -24,9 +24,20 @@ export const Tweets = () => {
   return (
     <div>
       <Link to="/">go back</Link>
-      <StyledTweets>
+      <TweetsContainer>
         <TweetCard />
-      </StyledTweets>
+        <TweetCard />
+        <TweetCard />
+        <TweetCard />
+        <TweetCard />
+        <TweetCard />
+        <TweetCard />
+        <TweetCard />
+        <TweetCard />
+        <TweetCard />
+        <TweetCard />
+        <TweetCard />
+      </TweetsContainer>
     </div>
   );
 };
