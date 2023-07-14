@@ -13,6 +13,11 @@ export const FollowButton = styled.button`
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    border: 2px solid blue;
+  }
 `;
 
 export const FollowingButton = styled.button`
@@ -28,4 +33,9 @@ export const FollowingButton = styled.button`
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    border: 2px solid blue;
+  }
 `;

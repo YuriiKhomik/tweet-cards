@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
-import { TweetsContainer } from './Tweets.styled';
+import { GoBackButton, TweetsContainer, TweetsMenu } from './Tweets.styled';
 import { TweetCard } from 'components/TweetCard';
-import { Link } from 'react-router-dom';
 import { getUsers } from 'services';
 
 export const Tweets = () => {
@@ -22,8 +21,11 @@ export const Tweets = () => {
 
   console.log(users);
   return (
-    <div>
-      <Link to="/">go back</Link>
+    <>
+      <TweetsMenu>
+        <GoBackButton to="/">go back</GoBackButton>
+        <GoBackButton to="/">go back</GoBackButton>
+      </TweetsMenu>
       <TweetsContainer>
         <TweetCard />
         <TweetCard />
@@ -33,11 +35,7 @@ export const Tweets = () => {
         <TweetCard />
         <TweetCard />
         <TweetCard />
-        <TweetCard />
-        <TweetCard />
-        <TweetCard />
-        <TweetCard />
       </TweetsContainer>
-    </div>
+    </>
   );
 };

@@ -4,7 +4,7 @@ import { ReactComponent as LogoIcon } from '../images/LogoVector.svg';
 import avatarLine from '../images/avatar-line.png';
 
 export const StyledTweetCard = styled.li`
-  outline: 1px solid red;
+  // outline: 1px solid red;
 
   width: 380px;
   height: 460px;
@@ -18,7 +18,12 @@ export const StyledTweetCard = styled.li`
   flex-direction: column;
   align-items: center;
   padding: 28px 0px 28px;
-  margin: 0 auto;
+
+  &:hover,
+  &:focus {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.03);
+  }
 `;
 
 export const BgImagesContainer = styled.div`
