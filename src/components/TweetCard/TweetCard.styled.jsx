@@ -4,8 +4,6 @@ import { ReactComponent as LogoIcon } from '../images/LogoVector.svg';
 import avatarLine from '../images/avatar-line.png';
 
 export const StyledTweetCard = styled.li`
-  // outline: 1px solid red;
-
   width: 380px;
   height: 460px;
   background: linear-gradient(#471ca9, #5736a3, #4b2a99);

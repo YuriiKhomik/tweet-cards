@@ -2,10 +2,8 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const TweetsContainer = styled.ul`
-  outline: 1px solid red;
-
   width: 100wv;
-  padding: 80px 0px;
+  padding: 80px 0px 20px;
 
   display: flex;
   flex-wrap: wrap;
@@ -40,5 +38,15 @@ export const TweetsMenu = styled.div`
   width: 100%;
   height: 60px;
   padding: 15px 60px;
-  border-bottom: 1px solid red;
+  box-shadow: 0px 15px 10px -15px #111;
+`;
+
+export const LMButtonContainer = styled.div`
+  width: 100%;
+  min-height: 60px;
+  padding: 20px 0px 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
