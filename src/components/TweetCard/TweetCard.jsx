@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 
 import {
   Logo,
@@ -89,4 +90,12 @@ export const TweetCard = ({
       <Button onClick={handleClick} follow={follow} isLoading={isLoading} />
     </StyledTweetCard>
   );
+};
+
+TweetCard.propTypes = {
+  tweets: PropTypes.number,
+  initialFollowers: PropTypes.number,
+  avatar: PropTypes.string,
+  id: PropTypes.string,
+  userName: PropTypes.string,
 };

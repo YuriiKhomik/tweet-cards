@@ -1,7 +1,7 @@
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 
-const options = ['all', 'follow', 'followings'];
+const options = ['show all', 'follow', 'followings'];
 const defaultOption = options[0];
 
 export const DropdownMenu = ({ onChange }) => {
