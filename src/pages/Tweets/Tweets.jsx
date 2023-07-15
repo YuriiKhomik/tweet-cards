@@ -16,7 +16,7 @@ export const Tweets = () => {
   const [page, setPage] = useState(1);
   const [isLoading, setIsloading] = useState(false);
   const [initialLoading, setInitialLoading] = useState(true);
-  const [filterOption, setFilterOption] = useState('follow');
+  const [filterOption, setFilterOption] = useState('all');
 
   useEffect(() => {
     const abortController = new AbortController();
