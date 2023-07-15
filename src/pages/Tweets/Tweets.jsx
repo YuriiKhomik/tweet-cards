@@ -8,25 +8,30 @@ import {
 import { TweetCard } from 'components/TweetCard';
 import { getUsers } from 'services';
 import { LoadMoreButton } from 'components/LoadMoreButton';
+import { PageLoader } from 'components/Loaders';
 
 export const Tweets = () => {
   const [users, setUsers] = useState([]);
   const [page, setPage] = useState(1);
+  const [isLoading, setIsloading] = useState(false);
+  const [initialLoading, setInitialLoading] = useState(true);
 
   useEffect(() => {
     const abortController = new AbortController();
 
     const fetchUsers = async () => {
+      setIsloading(true);
       try {
         const response = await getUsers(page);
         setUsers(pre => [...pre, ...response]);
+        setIsloading(false);
+        setInitialLoading(false);
       } catch (error) {
         console.error('Error fetching users:', error);
       }
     };
 
     fetchUsers();
-    console.log('first useEffect');
 
     return () => {
       abortController.abort();
@@ -34,7 +39,6 @@ export const Tweets = () => {
   }, [page]);
 
   const handleLoadMore = () => {
-    console.log('click on load more button');
     setPage(prevPage => prevPage + 1);
   };
 
@@ -44,6 +48,7 @@ export const Tweets = () => {
         <GoBackButton to="/">go back</GoBackButton>
         {/* <GoBackButton to="/">go back</GoBackButton> */}
       </TweetsMenu>
+      {isLoading && <PageLoader />}
       <TweetsContainer>
         {users.map(item => {
           const {
@@ -65,13 +70,17 @@ export const Tweets = () => {
           );
         })}
       </TweetsContainer>
-      <LMButtonContainer>
-        {page < 4 ? (
-          <LoadMoreButton onClick={handleLoadMore}>Load more</LoadMoreButton>
-        ) : (
-          <p>that's all users so far</p>
-        )}
-      </LMButtonContainer>
+      {!initialLoading && (
+        <LMButtonContainer>
+          {page < 4 ? (
+            <LoadMoreButton onClick={handleLoadMore} disabled={isLoading}>
+              Load more
+            </LoadMoreButton>
+          ) : (
+            <p>that's all users so far</p>
+          )}
+        </LMButtonContainer>
+      )}
     </>
   );
 };

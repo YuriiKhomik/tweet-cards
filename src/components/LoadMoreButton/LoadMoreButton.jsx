@@ -1,5 +1,9 @@
 import { StyledLMButton } from './LoadMoreButton.styled';
 
-export const LoadMoreButton = ({ onClick }) => {
-  return <StyledLMButton onClick={onClick}>Load more</StyledLMButton>;
+export const LoadMoreButton = ({ onClick, disabled }) => {
+  return (
+    <StyledLMButton onClick={onClick} disabled={disabled}>
+      Load more
+    </StyledLMButton>
+  );
 };

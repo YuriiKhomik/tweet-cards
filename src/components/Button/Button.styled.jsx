@@ -18,6 +18,12 @@ export const FollowButton = styled.button`
   &:focus {
     border: 2px solid blue;
   }
+
+  &:disabled {
+    background: #e7e8e9;
+    color: #9fa3a9;
+    cursor: not-allowed;
+  }
 `;
 
 export const FollowingButton = styled.button`
@@ -37,5 +43,11 @@ export const FollowingButton = styled.button`
   &:hover,
   &:focus {
     border: 2px solid blue;
+  }
+
+  &:disabled {
+    background: #e7e8e9;
+    color: #9fa3a9;
+    cursor: not-allowed;
   }
 `;
