@@ -9,12 +9,14 @@ import { TweetCard } from 'components/TweetCard';
 import { getUsers } from 'services';
 import { LoadMoreButton } from 'components/LoadMoreButton';
 import { PageLoader } from 'components/Loaders';
+import { DropdownMenu } from 'components/DropdownMenu';
 
 export const Tweets = () => {
   const [users, setUsers] = useState([]);
   const [page, setPage] = useState(1);
   const [isLoading, setIsloading] = useState(false);
   const [initialLoading, setInitialLoading] = useState(true);
+  const [filterOption, setFilterOption] = useState('follow');
 
   useEffect(() => {
     const abortController = new AbortController();
@@ -23,7 +25,7 @@ export const Tweets = () => {
       setIsloading(true);
       try {
         const response = await getUsers(page);
-        setUsers(pre => [...pre, ...response]);
+        setUsers(prevUsers => [...prevUsers, ...response]);
         setIsloading(false);
         setInitialLoading(false);
       } catch (error) {
@@ -42,15 +44,34 @@ export const Tweets = () => {
     setPage(prevPage => prevPage + 1);
   };
 
+  const handleFilterChange = e => {
+    setFilterOption(e.value);
+  };
+
+  const filteredUsers = users.filter(user => {
+    if (filterOption === 'all') {
+      return true; // Render all users
+    } else if (filterOption === 'follow') {
+      const followedUsers =
+        JSON.parse(localStorage.getItem('followedUsers')) || [];
+      return !followedUsers.includes(user.id); // Render users not in the followedUsers list
+    } else if (filterOption === 'followings') {
+      const followedUsers =
+        JSON.parse(localStorage.getItem('followedUsers')) || [];
+      return followedUsers.includes(user.id); // Render users in the followedUsers list
+    }
+    return false;
+  });
+
   return (
     <>
       <TweetsMenu>
         <GoBackButton to="/">go back</GoBackButton>
-        {/* <GoBackButton to="/">go back</GoBackButton> */}
+        <DropdownMenu onChange={handleFilterChange} />
       </TweetsMenu>
       {isLoading && <PageLoader />}
       <TweetsContainer>
-        {users.map(item => {
+        {filteredUsers.map(item => {
           const {
             tweets,
             followers: initialFollowers,
