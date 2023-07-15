@@ -50,15 +50,15 @@ export const Tweets = () => {
 
   const filteredUsers = users.filter(user => {
     if (filterOption === 'all') {
-      return true; // Render all users
+      return true;
     } else if (filterOption === 'follow') {
       const followedUsers =
         JSON.parse(localStorage.getItem('followedUsers')) || [];
-      return !followedUsers.includes(user.id); // Render users not in the followedUsers list
+      return !followedUsers.includes(user.id);
     } else if (filterOption === 'followings') {
       const followedUsers =
         JSON.parse(localStorage.getItem('followedUsers')) || [];
-      return followedUsers.includes(user.id); // Render users in the followedUsers list
+      return followedUsers.includes(user.id);
     }
     return false;
   });
@@ -93,7 +93,7 @@ export const Tweets = () => {
       </TweetsContainer>
       {!initialLoading && (
         <LMButtonContainer>
-          {page < 4 ? (
+          {page < 4 && filterOption === 'all' ? (
             <LoadMoreButton onClick={handleLoadMore} disabled={isLoading}>
               Load more
             </LoadMoreButton>
