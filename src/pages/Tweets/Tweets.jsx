@@ -16,7 +16,7 @@ export const Tweets = () => {
   const [page, setPage] = useState(1);
   const [isLoading, setIsloading] = useState(false);
   const [initialLoading, setInitialLoading] = useState(true);
-  const [filterOption, setFilterOption] = useState('all');
+  const [filterOption, setFilterOption] = useState('show all');
 
   useEffect(() => {
     const abortController = new AbortController();
@@ -49,7 +49,7 @@ export const Tweets = () => {
   };
 
   const filteredUsers = users.filter(user => {
-    if (filterOption === 'all') {
+    if (filterOption === 'show all') {
       return true;
     } else if (filterOption === 'follow') {
       const followedUsers =
@@ -93,7 +93,7 @@ export const Tweets = () => {
       </TweetsContainer>
       {!initialLoading && (
         <LMButtonContainer>
-          {page < 4 && filterOption === 'all' ? (
+          {page < 4 && filterOption === 'show all' ? (
             <LoadMoreButton onClick={handleLoadMore} disabled={isLoading}>
               Load more
             </LoadMoreButton>
