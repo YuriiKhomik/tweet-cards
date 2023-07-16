@@ -12,5 +12,3 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
-
-// basename="/tweet-cards"
