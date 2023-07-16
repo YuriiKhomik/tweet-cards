@@ -7,7 +7,7 @@ Project was created using [Create React App](https://create-react-app.dev/).
 
 - [Installation](#installation)
 - [Features](#features):
-  [Routing](#routing)||[TweetCard](#TweetCard)||[Pagination](#Pagination)||[Backend](#Backend)||[Filter](#Filter)
+  [Routing](#routing)||[TweetCard](#tweetCard)||[Pagination](#pagination)||[Backend](#backend)||[Filter](#filter)
 - [Contributing](#contributing)
 - [Contact](#contact)
 
